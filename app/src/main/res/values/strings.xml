@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="weather">Weather</string>
+    <string name="city">city</string>
+    <string name="haze">Haze</string>
+    <string name="_24c">24C</string>
+    <string name="lat_lon">23 12</string>
+</resources>
