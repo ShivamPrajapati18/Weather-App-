@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+    val apiKey = "3ec6604830f5fdb0a49d66017370daf4"
     // apiKey="3ec6604830f5fdb0a49d66017370daf4"
     // base url=https://api.openweathermap.org/data/2.5/weatherlat={lat}&lon={lon}&exclude={part}&appid={API key}
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData(lat: String?, lon: String?) {
-        val apiKey = "3ec6604830f5fdb0a49d66017370daf4"
         val url = "https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}"
         Log.d("api", url)
         val jsonObjectRequest= JsonObjectRequest(
@@ -60,10 +59,10 @@ class MainActivity : AppCompatActivity() {
         val calSunset = response.getJSONObject("sys").getLong("sunset")
         sunset.text =
             "Sunset\n" + SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(calSunset * 1000)
-        wind.text ="Wind\n"+ response.getJSONObject("wind").getString("speed") + " mh"
+        wind.text ="Wind\n"+ response.getJSONObject("wind").getString("speed") + " m/s"
         humudity.text = "Humudity\n"+response.getJSONObject("main").getString("humidity")+"%"
         pressure.text = "Pressure\n"+response.getJSONObject("main").getString("pressure")
-        /*var minTemp = response.getJSONObject("main").getString("temp_min")
+        var minTemp = response.getJSONObject("main").getString("temp_min")
         minTemp = (((minTemp.toFloat() - 273.15)).toInt()).toString()
         min_temp.text = "Min Temp\n$minTemp°C"
         var maxTemp = response.getJSONObject("main").getString("temp_max")
@@ -71,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         max_temp.text = "Max Temp\n$maxTemp°C"
         var feelsLike = response.getJSONObject("main").getString("feels_like")
         feelsLike = (((feelsLike.toFloat() - 273.15)).toInt()).toString()
-        feels_like.text = "Feels Like\n$feelsLike°C"*/
+        feels_like.text = "Feels Like\n$feelsLike°C"
     }
 }
 

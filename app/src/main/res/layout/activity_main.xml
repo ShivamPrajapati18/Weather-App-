@@ -89,7 +89,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/_24c"
                 android:textColor="@color/black"
-                android:textSize="80sp" />
+                android:textSize="70sp" />
 
             <ImageView
                 android:id="@+id/weatherImg"
@@ -128,7 +128,7 @@
 
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="wrap_content"
-                            android:layout_height="150dp"
+                            android:layout_height="100dp"
                             android:scaleType="fitCenter"
                             app:lottie_autoPlay="true"
                             app:lottie_fileName="sunrise.json"
@@ -167,7 +167,7 @@
 
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="wrap_content"
-                            android:layout_height="150dp"
+                            android:layout_height="100dp"
                             android:scaleType="fitCenter"
                             app:lottie_autoPlay="true"
                             app:lottie_fileName="wind_animation.json"
@@ -205,7 +205,7 @@
                         <com.airbnb.lottie.LottieAnimationView
                             android:id="@+id/sunsetanim"
                             android:layout_width="wrap_content"
-                            android:layout_height="150dp"
+                            android:layout_height="100dp"
                             android:scaleType="fitCenter"
                             app:lottie_autoPlay="true"
                             app:lottie_fileName="sunrise.json"
@@ -259,57 +259,47 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linear2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/linear1">-->
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear1">
 
-<!--                <TextView-->
-<!--                    android:id="@+id/min_temp"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="Min Temp\n"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="20sp" />-->
+                <TextView
+                    android:id="@+id/min_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Min Temp\n"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/feels_like"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="Feels Like\n"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="20sp" />-->
+                <TextView
+                    android:id="@+id/feels_like"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Feels Like\n"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/max_temp"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="Max Temp\n"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="20sp" />-->
-<!--            </LinearLayout>-->
+                <TextView
+                    android:id="@+id/max_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Max Temp\n"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/mainCard" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
